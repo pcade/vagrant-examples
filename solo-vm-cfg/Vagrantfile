@@ -3,7 +3,6 @@ Vagrant.configure("2") do |config|
   config.vm.define "debian11" do |srv|
     srv.vm.box = "generic/debian11"
     srv.vm.provider "virtualbox" do |vb|
-    srv.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = 2
     end
