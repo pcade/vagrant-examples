@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
       vb.name = "ansible-demo-web1"
       vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
       vb.customize ["modifyvm", :id, "--nictype2", "virtio"]
+      vb.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
     end
   end
 end
