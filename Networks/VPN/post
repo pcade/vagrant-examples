@@ -1,0 +1,9 @@
+# VM
+sudo apt update
+sudo apt install resolvconf wireguard -y
+sudo systemctl enable resolvconf.service
+sudo systemctl start resolvconf.service
+sudo wg-quick up wg0
+sudo wg show
+ping 10.10.10.1
+curl ifconfig.me
