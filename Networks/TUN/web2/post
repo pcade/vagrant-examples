@@ -1,0 +1,24 @@
+#host
+curl http://localhost
+curl http://localhost:80
+curl http://localhost:8080
+ip a
+curl http://localhost:8080
+curl http://localhost:80
+curl http://localhost:8888
+
+vagrant ssh-config web2 > ssh_config
+ssh -F ssh_config -D 1080 web2
+curl --socks5 localhost:1080 http://example.org
+
+
+# VM
+curl http://localhost
+sudo apt update && sudo apt install -y apache2
+sudo systemctl enable --now apache2
+curl http://localhost
+curl http://localhost:80
+curl http://localhost:8080
+ssh -R 8888:localhost:80 u@192.168.122.1
+sudo tcpdump
+sudo tcpdump -ni enp0s3 tcp port 80 -c 5
