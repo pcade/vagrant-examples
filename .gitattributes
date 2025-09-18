@@ -1,3 +1,4 @@
+Vagrantfile linguist-detectable=true
 Vagrantfile linguist-language=Ruby
 post linguist-language=Shell
 *.html linguist-language=HTML
